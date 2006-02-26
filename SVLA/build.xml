@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="javadoc">
+	<target name="javadoc">
+		<javadoc access="public" author="true" classpath="lib/arq.jar:lib/log4j-1.2.12.jar:lib/jena.jar:lib/concurrent.jar:lib/jakarta-oro-2.0.8.jar:lib/commons-logging.jar:lib/icu4j_3_4.jar:lib/antlr-2.7.5.jar" destdir="api" doctitle="SVLA 0.1M1 API Specifications" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="org.openmemex.svla.model" source="1.4" sourcepath="src" splitindex="true" use="true" version="true">
+			<link href="http://java.sun.com/j2se/1.4.2/docs/api/"/>
+			<link href="http://jena.sourceforge.net/javadoc/"/>
+		</javadoc>
+	</target>
+</project>
