@@ -25,7 +25,7 @@ import java.util.List;
  * <p>Rem : this does not specify how model value types map to implementation datatypes.</p> 
  * 
  * @author <a href="mailto:chris@openborges.org">chris</a>
- * @version $Id: CharacteristicSpec.java,v 1.1 2008/08/29 14:21:32 duf Exp $ 
+ * @version $Id: CharacteristicSpec.java,v 1.2 2008/08/29 16:26:40 duf Exp $ 
  */
 public interface CharacteristicSpec extends Sem {
 
@@ -40,8 +40,6 @@ public interface CharacteristicSpec extends Sem {
 	 * 
 	 * <p>A <i>generalization</i> is defined by: a characteristic <code>C1</code> is a generalization of <code>C2</code>,
 	 * whenever the model states <code>{s , C1, v} => {s , C2, v}</code>.
-	 * <p>A <i>specialization</i> : a characteristic <code>C1</code> is a specialization of <code>C2</code>,
-	 * whenever the model states <code>{s , C2, v} => {s , C1, v}</code>.
 	 * 
 	 * @param strict Determine wether to recursively include (<code>false</code>), or not (<code>true</code>),
 	 * the hypernyms.
@@ -52,10 +50,12 @@ public interface CharacteristicSpec extends Sem {
 	/** Accessor to the characteristics known as a specialization (hyponymy) for
 	 * this one.
 	 * 
+	 * <p>A <i>specialization</i> : a characteristic <code>C1</code> is a specialization of <code>C2</code>,
+	 * whenever the model states <code>{s , C2, v} => {s , C1, v}</code>.
+	 * 
 	 * @param strict Determine wether to recursively include (<code>false</code>), or not (<code>true</code>),
 	 * the hyponyms.
 	 * @return A list containing the characteristics known as specializations of this one.
 	 */
 	public List<CharacteristicSpec> getSpecialization(boolean strict) ;
-
 }
