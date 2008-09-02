@@ -20,11 +20,10 @@
 
 package org.openborges.memex.ubus;
 
-import java.util.Properties;
 
 /**
  * @author <a href="mailto:chris@openborges.org">chris</a>
- * @version $Id: IUniverseBus.java,v 1.1 2008/08/29 16:26:40 duf Exp $
+ * @version $Id: IUniverseBus.java,v 1.2 2008/09/02 17:21:49 duf Exp $
  *
  */
 public interface IUniverseBus {
@@ -35,16 +34,31 @@ public interface IUniverseBus {
 	public IUniverseFactory getUniverseFactory();
 	
 	/**
-	 * @param factoryUri
-	 * @return
-	 */
-	public IUniverseFactory getUniverseFactory(String factoryUri);
-	
-	/**
-	 * @param factoryUri
 	 * @param factorySpec
 	 * @return
 	 */
-	public IUniverseFactory getUniverseFactory(String factoryUri, Properties factorySpec);
-
+	public IUniverseFactory getUniverseFactory(IFactorySpec factorySpec);
+	
+	/**
+	 * @return
+	 */
+	public IUniverseFactory getMetaphorFactory();
+	
+	/**
+	 * @param factorySpec
+	 * @return
+	 */
+	public IUniverseFactory getMetaphorFactory(IFactorySpec factorySpec);
+	
+	/**
+	 * @return
+	 */
+	public IUniverseFactory getMeasureFactory();
+	
+	/**
+	 * @param factoryUri
+	 * @return
+	 */
+	public IUniverseFactory getMeasureFactory(IFactorySpec factorySpec);
+	
 }

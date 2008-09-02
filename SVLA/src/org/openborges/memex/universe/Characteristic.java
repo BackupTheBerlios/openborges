@@ -27,13 +27,13 @@ package org.openborges.memex.universe;
  */
 public interface Characteristic {
 
-	/** Accessor to the valuated characteristic <i>definition</i>.
+	/** Accessor to the valued characteristic <i>definition</i>.
 	 * 
-	 * @return The specification of the valuated characteristic.
+	 * @return The specification URI of the valued characteristic.
 	 */
-	public CharacteristicSpec getDefinition() ;
+	public String getDefinition() ;
 	
-	/** Accessor to the value object the characteristic is valuated to.
+	/** Accessor to the value object the characteristic is valued to.
 	 * 
 	 * @return An implementation of the value object, according to the
 	 * characteristic specification.

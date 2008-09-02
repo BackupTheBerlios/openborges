@@ -50,7 +50,7 @@ import java.util.List;
  * </ul></p>
  * 
  * @author <a href="mailto:chris@openborges.org">chris</a>
- * @version $Id: Sem.java,v 1.1 2008/08/29 14:21:32 duf Exp $ 
+ * @version $Id: Sem.java,v 1.2 2008/09/02 17:21:49 duf Exp $ 
  */
 public interface Sem {
 
@@ -86,14 +86,25 @@ public interface Sem {
 	 */
 	public String getSpecification() ;
 
-	/** Accessor to this sem <i>taxonomy</i>.
+	/**
+	 * Accessor to this sem taxonomy.
 	 * 
-	 * @param strict Determine wether to recursively include (<code>false</code>), or not (<code>true</code>), the
-	 * taxonomy hypernyms.
-	 * @return A list containing the <i>taxon</i> this sem is known as a member of.
+	 * @return The list of taxon this sem is <i>explicitly known</i> as a member of.
 	 */
-	public List<Taxon> getTaxonomy(boolean strict) ;
+	public List<Taxon> getTaxonomy();
+	
+	/** Accessor to this sem <i>hypernymy</i>.
+	 * 
+	 * @return A list containing the <i>taxon</i> known as hypernyms of this.
+	 */
+	public List<Taxon> getHypernymy() ;
 
+	/** Accessor to this sem <i>hyponymy</i>.
+	 * 
+	 * @return A list containing the <i>taxon</i> known as hyponyms of this.
+	 */
+	public List<Taxon> getHyponymy() ;
+	
 	/** Accessor to a <i>valuated characteristc</i>.
 	 * 
 	 * @param chracteristicURI The URI identifying the requested <i>characteristic</i>.
@@ -114,10 +125,15 @@ public interface Sem {
 	 */
 	public List<Behavior> getBehavior(String behaviorURI) ;
 	
-	/** Accessor to this sem <i>directed closure</i>.
+	/** Accessor to this sem <i>closure</i>.
 	 * 
 	 * @return A list containing all known behavior values.
 	 */
-	public List<Behavior> getDirectedClosure() ;
+	public List<Behavior> getClosure() ;
+	
+	/**
+	 * @return
+	 */
+	public Object getModel();
 	
 }

@@ -19,26 +19,24 @@
  */
 package org.openborges.memex.ubus;
 
-import org.openborges.memex.universe.Universe;
+import java.util.Properties;
 
 /**
  * @author <a href="mailto:chris@openborges.org">chris</a>
- * @version $Id: IUniverseFactory.java,v 1.2 2008/09/02 17:21:49 duf Exp $
+ * @version $Id: IFactorySpec.java,v 1.1 2008/09/02 17:21:49 duf Exp $
  *
  */
-public interface IUniverseFactory {
+public interface IFactorySpec {
 
 	/**
-	 * @param universeUri
-	 * @param create TODO
 	 * @return
 	 */
-	public Universe getUniverse(String universeUri);
+	public Properties getProperties();
 	
 	/**
-	 * @param universeUri
+	 * @param key
 	 * @return
 	 */
-	public Universe createUniverse(String universeUri);
+	public String getProperty(String key);
 	
 }

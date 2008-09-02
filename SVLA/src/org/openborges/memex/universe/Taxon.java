@@ -26,17 +26,15 @@ import java.util.List;
  * a systematic unit, or <i>taxon</i>.
  * 
  * @author <a href="mailto:chris@openborges.org">chris</a>
- * @version $Id: Taxon.java,v 1.1 2008/08/29 14:21:32 duf Exp $ 
+ * @version $Id: Taxon.java,v 1.2 2008/09/02 17:21:49 duf Exp $ 
  */
 public interface Taxon extends Sem {
 
 	/** Accessor to this taxon hypernyms.
 	 * 
-	 * @param strict Determines wether to recursively include (<code>false</code>), 
-	 * or not (<code>true</code>), this taxon hypernyms.
 	 * @return A list containing all taxon known as hypernym of this one		.
 	 */
-	public List<Taxon> getHypernymy(boolean strict) ;
+	public List<Taxon> getHypernymy() ;
 	
 	/** Accessor to this taxon hyponyms.
 	 * 

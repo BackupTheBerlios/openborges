@@ -24,7 +24,7 @@ import java.util.List;
 
 /**
  * @author <a href="mailto:chris@openborges.org">chris</a>
- * @version $Id: Universe.java,v 1.1 2008/08/29 16:26:40 duf Exp $
+ * @version $Id: Universe.java,v 1.2 2008/09/02 17:21:49 duf Exp $
  *
  */
 public interface Universe extends Sem {
@@ -89,9 +89,8 @@ public interface Universe extends Sem {
 	 * @param sem
 	 * @param characteristic
 	 * @param value
-	 * @return
 	 */
-	public Characteristic setCharacteristic(Sem sem, 
+	public void setCharacteristic(Sem sem, 
 			CharacteristicSpec characteristic,
 			Object value);
 
